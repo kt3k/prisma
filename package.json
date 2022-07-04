@@ -9,13 +9,13 @@
     "Alexey Orlenko <orlenko@prisma.io>"
   ],
   "engines": {
-    "node": ">=14",
-    "pnpm": ">=6.14.1 <7"
+    "node": ">=14.17",
+    "pnpm": ">=7.3.0 <8"
   },
   "scripts": {
     "setup": "ts-node scripts/setup.ts",
     "build": "ts-node scripts/setup.ts --build",
-    "watch": "pnpm -r run dev && WATCH=true pnpm -r run dev --parallel --stream",
+    "watch": "pnpm -r run dev && WATCH=true pnpm -r --parallel --stream run dev",
     "publish-all-dryrun": "ts-node scripts/ci/publish.ts --publish --dry-run",
     "publish-all": "ts-node scripts/ci/publish.ts --publish",
     "bump-engines": "ts-node scripts/bump-engines.ts",
@@ -64,7 +64,7 @@
     "graphviz-mit": "0.0.9",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
-    "jest-junit": "13.2.0",
+    "jest-junit": "14.0.0",
     "lint-staged": "13.0.2",
     "node-fetch": "2.6.7",
     "p-map": "4.0.0",
